@@ -1,14 +1,20 @@
-
+import { useNavigate } from 'react-router-dom';
 
 const BrandList = ({ brandEntry }) => {
 
+    const navigate = useNavigate();
+
+    const handleBrand = () => {
+        navigate(`/allBrand/${brandEntry.brand}`)
+    }
+
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div onClick={handleBrand} className="card w-96 bg-base-100 shadow-xl">
             <figure>
                 <img className="w-full h-52 object-cover" src={brandEntry.image} alt="Car" />
             </figure>
             <div className="card-body">
-                <p className="all-font">{brandEntry.name}</p>
+                <p className="all-font text-xl">{brandEntry.name}</p>
             </div>
         </div>
     );
