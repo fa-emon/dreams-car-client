@@ -53,11 +53,14 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
                 {isUserLoggedIn &&
-                    <img
-                        src="/path/to/user-profile-image.jpg" // Replace with the actual image path
-                        alt="User Profile"
-                        className="w-10 h-10 rounded-full mr-2"
-                    />
+                    <>
+                        <h2 className="all-font me-5">{user?.displayName}</h2>
+                        <img
+                            src={user?.photoURL} // Replace with the actual image path
+                            alt="User Profile"
+                            className="w-10 h-10 rounded-full mr-2"
+                        />
+                    </>
                 }
             </div>
 

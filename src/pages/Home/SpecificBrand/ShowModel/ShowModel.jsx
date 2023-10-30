@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 
 
 const ShowModel = ({ allModel }) => {
-    const { name, image, brand, price, ratings } = allModel;
+    const {brand_id, name, image, brand, price, ratings } = allModel;
+    
+    const navigate = useNavigate();
+
+    const handleDetails = () => {
+        navigate(`/allBrand/brand/${brand_id}`)
+    }
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -18,7 +25,7 @@ const ShowModel = ({ allModel }) => {
                         <p>Ratings: {ratings}</p>
                     </div>
                     <div className="card-actions justify-between">
-                        <button className="bg-teal-400 hover:bg-teal-700 hover:text-white rounded-md p-2 px-4 uppercase my-2 btn-sm">details</button>
+                        <button onClick={handleDetails} className="bg-teal-400 hover:bg-teal-700 hover:text-white rounded-md p-2 px-4 uppercase my-2 btn-sm">details</button>
                         <button className="bg-pink-400 hover:bg-pink-700 hover:text-white rounded-md p-2 px-4 uppercase my-2 btn-sm">update</button>
                     </div>
                 </div>
