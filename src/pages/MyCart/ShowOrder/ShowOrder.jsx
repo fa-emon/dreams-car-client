@@ -1,7 +1,8 @@
 import { MdDelete } from 'react-icons/md';
 
-const ShowOrder = ({ orders }) => {
-    const { name, image, price } = orders;
+const ShowOrder = ({ orders, handleDelete }) => {
+    const { _id, name, image, price } = orders;
+
     return (
         <tr>
             <td>
@@ -20,7 +21,7 @@ const ShowOrder = ({ orders }) => {
                 ${price}
             </td>
             <th>
-                <MdDelete className='text-3xl hover:text-red-600'></MdDelete>
+                <MdDelete onClick={() => handleDelete(_id)} className='text-3xl hover:text-red-600'></MdDelete>
             </th>
         </tr>
     );
