@@ -46,7 +46,7 @@ const MyCart = () => {
 
     return (
         <div>
-            <h2 className="heading-font text-3xl text-center my-6">Total {allOrder.length} orders are available</h2>
+            <h2 className="heading-font text-3xl text-center my-6">Total {order.length} orders are available</h2>
             <>
                 <div className="overflow-x-auto">
                     <table className="table">

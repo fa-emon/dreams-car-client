@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 
-
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     const isUserLoggedIn = !!user;

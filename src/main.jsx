@@ -7,14 +7,17 @@ import {
 import { router } from './routes/Routes';
 import AuthProvider from './providers/AuthProvider';
 import { Toaster } from 'react-hot-toast';
+import ThemeProvider from './providers/ThemeProvider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Toaster></Toaster>
-    <AuthProvider>
-      <div className='max-w-screen-xl mx-auto'>
-        <RouterProvider router={router} />
-      </div>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <div className='max-w-screen-xl mx-auto'>
+          <RouterProvider router={router} />
+        </div>
+      </AuthProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )

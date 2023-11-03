@@ -11,7 +11,7 @@ const BrandList = ({ brandEntry }) => {
     return (
         <div onClick={handleBrand} className="card w-96 bg-base-100 shadow-xl">
             <figure>
-                <img className="w-full h-52 object-cover" src={brandEntry.image} alt="Car" />
+                <img className="w-full h-52 object-cover transform hover:scale-110 transition-transform duration-300" src={brandEntry.image} alt="Car" />
             </figure>
             <div className="card-body">
                 <p className="all-font text-xl">{brandEntry.name}</p>

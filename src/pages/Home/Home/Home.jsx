@@ -3,6 +3,8 @@ import Banner from "../Banner/Banner";
 import BreakingTitle from "../BreakingTitle/BreakingTitle";
 import BrandList from "../BrandList/BrandList";
 import { useEffect, useState } from "react";
+import QualityAssurance from "../QualityAssurance/QualityAssurance";
+import TrustedBrands from "../TrustedBrands/TrustedBrands";
 
 const Home = () => {
     const [allBrand, setallBrand] = useState([]);
@@ -33,6 +35,8 @@ const Home = () => {
                     );
                 })}
             </div>
+            <QualityAssurance></QualityAssurance>
+            <TrustedBrands></TrustedBrands>
         </div>
     );
 };
